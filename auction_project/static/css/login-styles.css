@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(135deg, #d59bea,#7394e0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.universal_header{
+    background-color: rgb(255, 255, 255);
+    padding: 7px;
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    font-size: 2rem;
+}
+.ico-main{
+    position: relative;
+    z-index: 1;
+    fill: black;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.207);
+    transform: translateY(7rem);
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease;
+    animation: fadeInSlideIco 0.6s ease-out forwards;
+}
+@keyframes fadeInSlideIco {
+    to {
+        opacity: 1;
+        transform: translateY(9.5rem);
+    }
+}
+.usrpwd{
+    padding: 50px;
+    margin-top: 7rem;
+    z-index: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: max-content;
+    height: 9vw;
+    display: flex;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 20px;
+    transform: translateY(1rem);
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.515);
+    animation: fadeInSlide 0.6s ease-out forwards;
+}
+img{
+    background-color: rgba(89, 0, 255, 0.005);
+    width: 2rem;
+    height: 2rem;
+    transform: translateX(-1rem);
+    animation: fadeInSlideImg 0.6s ease-out forwards;
+}
+@keyframes fadeInSlideImg {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.invalid{
+    animation: fadeInSlide 0.6s ease-out forwards;
+    opacity: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+.usrnme,.pwd{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 14rem;
+    height: 1.85rem;
+    background:none;
+    border: none;
+    transition: all 5s ease;
+    animation: fadeInSlide 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+}
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bt-holder{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: max-content;
+}
+
+.bt{
+    margin-top: 1.5vw;
+    font-size: 1rem;
+    padding: 10px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 0.6vw;
+    transition: all 0.3s ease;
+}
+
+.bt:hover{
+    transform: scale(1.1);
+}
+.bt:active{
+    transform: scale(0.9);
+}

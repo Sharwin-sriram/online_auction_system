@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login-styles.css' %}">
+    <title>Login Page</title>
+</head>
+<body>
+    <header class="universal_header">
+        {% include 'header.html' %}
+    </header>
+    <img src="{% static 'images/profile_circle_main_top.svg' %}" class="ico-main">
+    <div class="usrpwd">
+        <form action="" method="post">
+            <!-- Username Box -->
+            {% csrf_token %}
+            <div class="usrnme">
+                <img src="{% static 'images/profile_icon_svg.svg' %}" alt="">
+                <input type="text" placeholder="Username" id="usrnme" name="usrnme"><br>
+            </div>
+            <br>
+            <!-- Password Box -->
+            <div class="pwd">
+                <img src="{% static 'images/lock-icon-svg.svg' %}" alt="">
+                <input type="password" placeholder="Password" id="pwd" name="pwd" required>
+            </div>
+            <br>
+            <div class="bt-holder">
+                <button type="submit" class="bt">LOGIN</button>
+            </div>
+            <div >
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="invalid">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</body>
+</html>

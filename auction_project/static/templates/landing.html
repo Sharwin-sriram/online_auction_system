@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <title>Landing</title>
+</head>
+<body>
+    <header class="universal_header">
+        {% include 'header.html' %}
+    </header>
+    <div class="btn_holders">
+        <h1>Welcome</h1>
+        <h3>Select an option to get started</h3>
+        <div class="btn">
+            <a href="{% url "login" %}"><button class="btn_login">Login</button></a>
+            <a href="{% url "register" %}"><button class="btn_register">Register</button></a>
+        </div>
+    </div>
+</body>
+</html>

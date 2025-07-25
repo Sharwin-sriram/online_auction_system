@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/listing-styles.css' %}">
+    <link rel="stylesheet" href="">
+    <title>Listings</title>
+</head>
+<body>
+    <header class="universal_header">
+        {% include 'header.html' %}
+    </header>
+    <div class="items">
+        {% for listing in Listings %}
+            <div class="container_each">
+                <button>
+                    <a href="{% url 'item_listed' listing.id %}">
+                        <h3>
+                            {{ listing.item_name }}
+                        </h3>
+                        <h4>
+                            {{ listing.item_description }}
+                        </h4>
+                    </a>
+                </button>
+            </div>
+        {% empty %}
+        <div class="none_yet">
+            <h2>No Listings Yet</h2>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

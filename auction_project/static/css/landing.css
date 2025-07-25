@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1{
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: black;
+}
+body{
+    position: relative;
+}
+h3{
+    font-size: 2vw;
+    font-weight: 300;
+}
+.btn_holders{
+    background-color: hsla(213, 73%, 97%, 0.575);
+    margin-top: 5rem;
+    padding: 3rem;
+    box-shadow: 0.5px 0.5px 6px black;
+    border-radius: 30px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50rem;
+    transition: all 1s ease;
+    height: 13vw;
+}
+.btn_holders:hover{
+    box-shadow: 1px 1px 7px black;
+}
+.btn{
+    height: 10px;
+    display: flex;
+    width: max-content;
+    margin-top: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 3vw;
+    justify-content: space-between;
+}
+button{
+    padding: 0.5vw;
+    background: azure;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+button:hover{
+    scale: 110%;
+}
+.btn_register{
+    border-radius: 0.5vw;
+    background-color: rgb(99, 211, 255);
+    font-size: 1.2rem;
+}
+.universal_header{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.right {
+    display: flex;
+}
